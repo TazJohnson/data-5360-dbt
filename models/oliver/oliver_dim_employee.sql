@@ -12,6 +12,5 @@ position,
 hire_date,
 first_name,
 last_name,
-phone_number,
-state
+phone_number
 FROM {{ source('oliver_landing', 'employee') }}
