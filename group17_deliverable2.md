@@ -1,5 +1,22 @@
-Write three business questions, the queries to answer them, and the queries' output when run against your data warehouse (dimensional model). 
+Group 17 Deliverable
+------------------------------------------------------------------------------------------------------
+Populated Dimensional Model:
+<img width="408" height="367" alt="image" src="https://github.com/user-attachments/assets/49d9436a-5275-44f0-800f-6003c0278827" />
+<img width="398" height="360" alt="image" src="https://github.com/user-attachments/assets/a149562a-a8eb-4090-ae41-a31e64acc5de" />
+Lineage Screenshot:
+<img width="1414" height="775" alt="image" src="https://github.com/user-attachments/assets/c50ee5d7-aabd-47c0-afbb-f9b7f7c11884" />
+Github Profiles:
+Taz: https://github.com/TazJohnson/data-5360-dbt
+Tyson: https://github.com/TysonMerrill/data-5360-dbt
 
+
+
+
+<br> 
+-------------------------------------------------------------------------------------------------------------------------------
+
+Business Questions And Answers:
+ 
 1. Which promotional campaign was most successful in sales?
 -- fact sales, promotional campaign. Multiply quanity by price after discount. Group by promotional campaign name.
 SELECT p.Campaign_Name, SUM(Quantity * Price_After_Discount) AS TotalSales
