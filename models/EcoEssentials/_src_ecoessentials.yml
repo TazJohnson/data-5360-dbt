@@ -2,19 +2,18 @@ version: 2
 
 sources:
   - name: ecoessentials_landing
-    database: tazjohnson
+    database: tysonmerrill
     schema: ECOESSENTIALS_ECOESSENTIALS_TRANSACTIONAL_DB
     tables:
       - name: customer
       - name: order
-      - name: orderline
+        identifier: '"ORDER"'
+      - name: order_line
       - name: product
       - name: promotional_campaign
 
-
   - name: ecoessentials_marketing
-    database: tazjohnson
+    database: tysonmerrill
     schema: ECOMARKETING
     tables:
-      - name: emaileventid
-
+      - name: marketingemails
