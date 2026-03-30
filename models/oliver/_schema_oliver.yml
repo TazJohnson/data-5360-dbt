@@ -3,16 +3,51 @@ version: 2
 models:
   - name: oliver_dim_employee
     description: "Store Employee Dimension"
+    columns:
+      - name: employee_key
+        tests: 
+          - unique
   - name: oliver_dim_customer
     description: "Store Customer Dimension"
+    columns:
+      - name: customer_key
+        tests:
+          - not_null
   - name: oliver_dim_date
     description: "Store Date Dimension"
+    columns: 
+      - name: day_of_week
+        tests: 
+          - accepted_values:
+              values:
+                - "1"
+                - "2"
+                - "3"
+                - "4"
+                - "5"
+                - "6"
+                - "7"
   - name: oliver_dim_store
     description: "Store Info Dimension"
   - name: oliver_dim_product
     description: "Store Product Dimension"
   - name: fact_sales
     description: "Store Sales Fact Dimension"
+    columns:
+      - name: store_key
+        tests:
+          - relationships:
+              to: ref('oliver_dim_store') 
+              field: store_key 
+              to: ref('oliver_dim_customer')
+              field: customer_key
+              to: ref('oliver_dim_date')
+              field: date_key
+              to: ref('oliver_dim_employee')
+              field: employee_key
+              to: ref('oliver_dim_product')
+              field: product_key
+              # Pretty sure only store test runs and I need to add a name/tests/relationship for each but not positive and it doesn't error.
   - name: stg_employee_certifications
     description: |
       Staging model for employee certifications.
