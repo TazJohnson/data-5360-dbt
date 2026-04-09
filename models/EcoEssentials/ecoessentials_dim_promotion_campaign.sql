@@ -4,7 +4,7 @@
     )
 }}
 
-select
+select distinct
 p.campaign_id as campaign_key,
 p.campaign_id,
 p.campaign_name,

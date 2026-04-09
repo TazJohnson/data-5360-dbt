@@ -17,3 +17,4 @@ sources:
     schema: ECOMARKETING
     tables:
       - name: marketingemails
+
