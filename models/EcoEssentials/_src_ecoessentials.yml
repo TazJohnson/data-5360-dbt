@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: ecoessentials_landing
-    database: tysonmerrill
+    database: tazjohnson
     schema: ECOESSENTIALS_ECOESSENTIALS_TRANSACTIONAL_DB
     tables:
       - name: customer
@@ -13,7 +13,7 @@ sources:
       - name: promotional_campaign
 
   - name: ecoessentials_marketing
-    database: tysonmerrill
+    database: tazjohnson
     schema: ECOMARKETING
     tables:
       - name: marketingemails
